@@ -4,6 +4,8 @@ import (
 	"log"
 	"net/http"
 
+	helper "github.com/BrandenSoropia/dodo-getaways-backend/db"
+
 	"github.com/gorilla/mux"
 )
 
@@ -12,6 +14,7 @@ func YourHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	helper.ConnectDB()
 	r := mux.NewRouter()
 	// Routes consist of a path and a handler function.
 	r.HandleFunc("/", YourHandler)
