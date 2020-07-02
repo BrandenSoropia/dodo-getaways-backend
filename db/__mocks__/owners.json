@@ -1,0 +1,19 @@
+{
+  "_id": { "$oid": "5efe08199e29720e61f54bf2" },
+  "username": "kevyellow",
+  "discord_username": "kevyellow#1234",
+  "description": "hello"
+}
+{
+  "_id": { "$oid": "5efe1039b2bb114440f189c0" },
+  "username": "rawtea",
+  "discord_username": "rawtea#1234",
+  "description": "yo"
+}
+{
+  "_id": { "$oid": "5efe10a0dedb542152dec579" },
+  "username": "rin",
+  "discord_username": "rin#1234",
+  "description": "hi"
+}
+

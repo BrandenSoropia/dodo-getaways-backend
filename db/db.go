@@ -26,7 +26,7 @@ func ConnectDB() {
 	}
 
 	// Test insert!
-	collection := client.Database("testing").Collection("numbers")
+	collection := client.Database("test").Collection("numbers")
 	res, err := collection.InsertOne(ctx, bson.M{"name": "pi", "value": 3.14159})
 	id := res.InsertedID
 

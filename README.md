@@ -29,6 +29,8 @@ To stop, kill process with `Control + C`. Then stop mongo by running `make mongo
 
 ## Get To Know the Database
 
-This project uses MongoDB. When doing dev work, the database should use the `testing` db (it will create this DB if it doesn't exist locally). This will be controlled by environment variables!
+This project uses MongoDB. When doing dev work, the database will use the `test` db (it will create this DB if it doesn't exist locally). This will be controlled by environment variables (eventually).
 
 There are some visual aids for the collections used. [You can find it here.](https://drive.google.com/drive/folders/17OerHsTk5D87UnQnGuKNVG_cr7yDg8v8?usp=sharing)
+
+You can load mock data by running `make load_mock_data`. It'll create 2 collections, `islands` and `owners`, each with a few documents.

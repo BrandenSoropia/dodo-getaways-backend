@@ -1,0 +1,28 @@
+{
+  "_id" : {"$oid":"5efe080ebfc37e084a6ad3c7"},
+  "owner": { "$oid": "5efe08199e29720e61f54bf2" },
+  "name": "Cappybara",
+  "hemisphere": "northern",
+  "description": "With its futuristic skyscrapers, unrivaled food scene, and wild nightlife, Tokyo is a rush of pure adrenaline. This vast and multifaceted city is famously cutting edge, yet its ancient Buddhist temples, vintage teahouses, and peaceful gardens offer a serene escape — and a poignant reminder of the city’s long history. And for those who know where to look, Tokyo’s smaller pleasures (secret ramen spots, shopping alleys, chill record bars) are often hiding in plain sight.",
+  "images": [],
+  "isDraft": false
+}
+{
+  "_id": { "$oid": "5efe085a3d84b17600ed1722" },
+  "owner": { "$oid": "5efe1039b2bb114440f189c0" },
+  "name": "PekoPeko",
+  "hemisphere": "southern",
+  "description": "Home to nearly nine million and powering an economy that exceeds both Hong Kong's and Thailand's, Osaka packs quite a punch. The confident, stylish city is a shopping hub, with fabulous restaurants and nightlife. It's an ideal base for exploring the Kansai region: Kyoto's World Heritage Sites, Nara's temple and Koya-san's eerie graves are within 90 minutes by train. Top city attractions include the aquarium, Osaka Castle, Universal Studios Japan and the futuristic Floating Garden Observatory.",
+  "images": [],
+  "isDraft": true
+}
+{
+  "_id": { "$oid": "5efe10747db968ccafa0af08" },
+  "owner": { "$oid": "5efe10a0dedb542152dec579" },
+  "name": "THE CLUB",
+  "hemisphere": "northern",
+  "description": "Where to find fancy Japanese steaks, loaded okonomiyaki, chewy udon, and fluffy Dojima roll cake in Japan’s second-largest city.",
+  "images": [],
+  "isDraft": true
+}
+

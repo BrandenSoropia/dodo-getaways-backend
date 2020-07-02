@@ -11,3 +11,9 @@ mongo_start:
 
 mongo_stop:
 	brew services stop mongodb-community@4.2
+
+load_mock_data:
+	mongoimport --db test --collection islands --drop --file ./db/__mocks__/islands.json
+	mongoimport --db test --collection owners --drop --file ./db/__mocks__/owners.json
+
+	
