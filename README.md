@@ -1,8 +1,8 @@
 # dodo-getaways-backend
 
-Backend to support Dodo Getaways using Go.
+Backend to support Dodo Getaways using Go and MongoDB.
 
-Follow the roadmap here: https://trello.com/c/x59sJxEj/17-brochure-idea-tripadvisor
+[Follow the roadmap here.](https://trello.com/b/iAFupku3/dodo-getaways)
 
 ## Setup
 
