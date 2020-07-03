@@ -1,34 +1,40 @@
-package helper
+package db
 
 import (
 	"context"
-	"fmt"
 	"log"
 	"time"
 
-	"go.mongodb.org/mongo-driver/bson"
+	"github.com/BrandenSoropia/dodo-getaways-backend/controllers"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
-func ConnectDB() {
-	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
-	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://localhost:27017"))
+var mongoURI string = "mongodb://localhost:27017"
+var databaseName string = "test"
 
+func Connect() {
+	// Database Config
+	clientOptions := options.Client().ApplyURI(mongoURI)
+	client, err := mongo.NewClient(clientOptions)
+
+	//Set up a context required by mongo.Connect
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	err = client.Connect(ctx)
+
+	//To close the connection at the end
+	defer cancel()
+
+	err = client.Ping(context.Background(), readpref.Primary())
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("Couldn't connect to the database", err)
+	} else {
+		log.Println("Connected!")
 	}
+	db := client.Database(databaseName)
 
-	err = client.Ping(ctx, readpref.Primary())
-	if err == nil {
-		fmt.Printf("Connected")
-	}
+	controllers.IslandCollection(db)
 
-	// Test insert!
-	collection := client.Database("test").Collection("numbers")
-	res, err := collection.InsertOne(ctx, bson.M{"name": "pi", "value": 3.14159})
-	id := res.InsertedID
-
-	fmt.Printf("Insterted %v", id)
+	return
 }
