@@ -47,7 +47,7 @@ You can find at least 1 example for each endpoint in a Postman Collection. You c
 https://www.getpostman.com/collections/3ea1645e09d4838a4200
 ```
 
-Finally click "Import" to confirm and you should be good to go!
+Finally click "Import" to confirm and you should be good to go! (If you're stuck, you can [try following these instructions instead](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-postman-data))
 
 Notes:
 Ideally I wish I had Go tests to really ensure these endpoints are working in different scenarios but learning how to do that is still a work in progress. For now, I've been manually testing each endpoint in each scenario manually simulating API calls via Postman and adding/removing data from the DB.
