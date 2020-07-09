@@ -213,6 +213,8 @@ func SetIsland(w http.ResponseWriter, r *http.Request) {
 		Key: "$set", Value: newIsland,
 	}}
 
+	// TODO: Check that owner exists first and does not have an island already. Do not allow if owner DNE, or if they have an island but gave a non-matching island id
+
 	opts := options.FindOneAndUpdate().SetUpsert(true).SetReturnDocument(options.After)
 	err = collection.FindOneAndUpdate(ctx, filter, update, opts).Decode(&updatedDocument)
 
