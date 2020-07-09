@@ -26,6 +26,7 @@ func main() {
 	// Routes consist of a path and a handler function.
 	r.HandleFunc("/get-islands", controllers.GetIslands).Methods("GET")
 	r.HandleFunc("/get-island", controllers.GetIsland).Methods("POST")
+	r.HandleFunc("/set-island", controllers.SetIsland).Methods("POST")
 
 	// Bind to a port and pass our router in
 	log.Fatal(http.ListenAndServe(":8000", r))

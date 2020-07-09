@@ -13,7 +13,7 @@ type Island struct {
 	Description  string             `json:"description" bson:"description"`
 	IsDraft      bool               `json:"is_draft" bson:"isDraft"`
 	Images       []string           `json:"images" bson:"images"`
-	OwnerDetails Owner              `json:"owner_details" bson:"owner_details,omitempty"`
+	OwnerDetails Owner              `json:"owner_details,omitempty" bson:"owner_details,omitempty"`
 }
 
 // Owner : Struct for owner data from DB.
