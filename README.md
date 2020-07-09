@@ -41,7 +41,13 @@ You can load mock data by running `make load_mock_data`. It'll create 2 collecti
 
 > Make sure you have the server running locally and loaded the mock data into the `test` db.
 
-You can find at least 1 example for each endpoint in this [Postman Collection](https://www.getpostman.com/collections/3ea1645e09d4838a4200).
+You can find at least 1 example for each endpoint in a Postman Collection. You can import it by opening Postman > Import (top left corner) then pasting the following URL:
+
+```
+https://www.getpostman.com/collections/3ea1645e09d4838a4200
+```
+
+Finally click "Import" to confirm and you should be good to go!
 
 Notes:
 Ideally I wish I had Go tests to really ensure these endpoints are working in different scenarios but learning how to do that is still a work in progress. For now, I've been manually testing each endpoint in each scenario manually simulating API calls via Postman and adding/removing data from the DB.
